@@ -15,17 +15,27 @@ public class splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent isplash= new Intent(splash.this,MainActivity.class);
-        startActivity(isplash);
+        setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent isplash= new Intent(splash.this,MainActivity.class
-                );
-                startActivity(isplash);
 
+        Thread thread = new Thread(){
+            public void run(){
+                try {
+                    sleep(4000);
+
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+
+                }
+                finally {
+                    Intent isplash=new Intent(splash.this, MainActivity.class);
+                    startActivity(isplash);
+
+                }
             }
-        },4000);
+        };thread.start();
+
+
     }
 }
