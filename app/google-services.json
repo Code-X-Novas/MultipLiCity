@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "510212417554",
+    "project_id": "multiplicity-1be9b",
+    "storage_bucket": "multiplicity-1be9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510212417554:android:069768238c7eabd48dd0cb",
+        "android_client_info": {
+          "package_name": "com.example.multiplicity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzhreOaHSnvyB0i7NRbfMD85ZvKWc-oD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
