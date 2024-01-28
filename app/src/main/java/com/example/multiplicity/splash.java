@@ -21,7 +21,7 @@ public class splash extends AppCompatActivity {
         Thread thread = new Thread(){
             public void run(){
                 try {
-                    sleep(4000);
+                    sleep(2000);
 
                 }
                 catch (Exception e){
