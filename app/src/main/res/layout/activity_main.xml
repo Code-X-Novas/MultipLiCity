@@ -87,7 +87,7 @@
     </TextView>
 
     <ImageButton
-        android:id="@+id/traffic_update_button"
+        android:id="@+id/leaderboard_button"
         android:layout_width="100dp"
         android:layout_height="95dp"
         android:layout_below="@+id/community_button"
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LeaderBoard"
-        android:layout_below="@+id/traffic_update_button"
+        android:layout_below="@+id/leaderboard_button"
         android:layout_marginLeft="260dp"
         android:textColor="#31D34C">
 
