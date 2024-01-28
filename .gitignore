@@ -1,27 +1,15 @@
-# .gitignore
-
-# Exclude build files
-app/build/
-build/
-
-# Exclude IDE files
-.idea/
-
-# Exclude Gradle wrapper
-gradle/wrapper/
-
-# Exclude build configuration files
 *.iml
-.gradle/
-local.properties
-
-# Exclude system files
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
 .DS_Store
-Thumbs.db
-
-# Exclude Docker related files
-Dockerfile
-.dockerignore
-
-# Exclude the extras folder
-llm-app/
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
