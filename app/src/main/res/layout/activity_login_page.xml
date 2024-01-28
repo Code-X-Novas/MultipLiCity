@@ -65,14 +65,13 @@
 
 
     <ImageView
+        android:id="@+id/continuebtn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="177dp"
-
         android:layout_marginBottom="52dp"
-
         android:src="@drawable/btn_arraw1">
 
     </ImageView>
