@@ -5,8 +5,100 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reg_page">
+    tools:context=".reg_page"
+    android:background="#EEF9E">
 
+    <ImageView
+        android:id="@+id/ui_registration"
+        android:layout_width="410dp"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_background1"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ui_registration"
+        android:layout_marginTop="-94dp"
+        android:layout_marginLeft="10dp"
+        android:text="Create\nAccount"
+        android:textColor="#31D34C"
+        android:textSize="30sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <EditText
+        android:id="@+id/emailbox"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:layout_below="@+id/create_account"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/email"
+        android:inputType="textEmailAddress"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/namebox"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Name"
+        android:drawablePadding="10dp"
+        android:layout_below="@+id/emailbox"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/name"
+        android:inputType="textPersonName"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/paswordbox"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Set your password"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/namebox"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/password"
+        android:inputType="textPassword"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/nativelangbox"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Your native Language"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/paswordbox"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:inputType="text"
+        >
+    </EditText>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="53dp"
+        android:src="@drawable/btn_arraw1">
+
+    </ImageView>
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +8,96 @@
     android:layout_height="match_parent"
     tools:context=".login_page">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ui_registration"
+        android:layout_width="410dp"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_background1"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ui_registration"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-88dp"
+        android:text="Welcome\nBack"
+        android:textColor="#31D34C"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/emailbox"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:layout_below="@+id/create_account"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/email"
+        android:inputType="textEmailAddress"
+        >
+    </EditText>
+
+
+
+    <EditText
+        android:id="@+id/paswordbox"
+        android:layout_below="@id/emailbox"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Your password"
+        android:drawablePadding="10dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/password"
+        android:inputType="textPassword"
+        >
+    </EditText>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="177dp"
+
+        android:layout_marginBottom="52dp"
+
+        android:src="@drawable/btn_arraw1">
+
+    </ImageView>
+
+
+    <View
+        android:id="@+id/myLine"
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/paswordbox"
+        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:background="#31D34C" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myLine"
+        android:layout_marginTop="35dp"
+        android:background="#31D34C"
+        android:layout_centerHorizontal="true"
+        android:text="Sign In with Google"
+        android:textSize="20dp">
+
+    </Button>
+
+
+</RelativeLayout>
