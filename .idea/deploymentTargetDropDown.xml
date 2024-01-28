@@ -5,6 +5,12 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="login_page">
+        <State />
+      </entry>
+      <entry key="reg_page">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
