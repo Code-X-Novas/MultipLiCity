@@ -1,5 +1,6 @@
 package com.example.multiplicity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,60 +8,77 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class login_page extends AppCompatActivity {
+    private EditText emailBox, passwordBox;
+    private Button continueBtn;
+    private FirebaseAuth mAuth;
 
-        private EditText emailEditText, passwordEditText;
-        private Button loginButton;
-        private DatabaseHelper databaseHelper;
 
-        @Override
+
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login_page);
+        mAuth = FirebaseAuth.getInstance();
 
-            // Initialize views
-            emailEditText = findViewById(R.id.emailbox);
-            passwordEditText = findViewById(R.id.paswordbox);
-            loginButton = findViewById(R.id.continuebtn);
+        // Find views by ID
+        emailBox = findViewById(R.id.emailbox);
+        passwordBox = findViewById(R.id.paswordbox);
+        continueBtn = findViewById(R.id.continuebtn);
 
-            // Initialize database helper
-            databaseHelper = new DatabaseHelper(this);
+        // Set onClickListener for the Continue button
+        continueBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Call a method to handle the login process
+                loginUser();
+            }
+        });
+    }
 
-            // Set click listener for login button
-            loginButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    loginUser();
-                }
-            });
+    private void loginUser() {
+        String email = emailBox.getText().toString().trim();
+        String password = passwordBox.getText().toString().trim();
+
+        // Validate email and password
+        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(login_page.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        private void loginUser() {
-            // Get user input
-            String emailStr = emailEditText.getText().toString();
-            String passwordStr = passwordEditText.getText().toString();
+        if (password.isEmpty()) {
+            Toast.makeText(login_page.this, "Please enter your password", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            // Check if email and password are not empty
-            if (emailStr.isEmpty() || passwordStr.isEmpty()) {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-                return;
-            }
+        // Sign in the user with email and password
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            startActivity(new Intent(login_page.this,MainActivity.class));
+                            finish();
+                        }else {
+                            Toast.makeText(login_page.this, "Login failed", Toast.LENGTH_SHORT).show();
 
-            // Check user credentials in the database
-            boolean isValidCredentials = databaseHelper.checkEmailpassword(emailStr, passwordStr);
+                        }
+                    }
 
-            // Display appropriate message
-            if (isValidCredentials) {
-                Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
-                // Add code to navigate to the next activity or perform desired action
-            } else {
-                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-            }
+    });
+
         }
     }
 
