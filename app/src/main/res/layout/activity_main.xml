@@ -42,44 +42,76 @@
 
     <ImageButton
         android:id="@+id/map_button"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
         android:layout_below="@+id/textView"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="95dp"
         android:scaleType="fitXY"
         android:src="@drawable/map_icon">
 
     </ImageButton>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_button"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="7dp"
+        android:text="Maps"
+        android:textColor="#31D34C">
+
+    </TextView>
+
     <ImageButton
         android:id="@+id/community_button"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
         android:layout_below="@+id/textView"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="95dp"
         android:scaleType="fitXY"
         android:src="@drawable/community_icon">
 
     </ImageButton>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Community"
+        android:textColor="#31D34C"
+        android:layout_below="@id/community_button"
+        android:layout_marginLeft="263dp"
+        android:layout_marginTop="7dp">
+
+    </TextView>
+
     <ImageButton
         android:id="@+id/traffic_update_button"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
-        android:layout_below="@+id/textView2"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="94dp"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/community_button"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="42dp"
         android:scaleType="fitXY"
         android:src="@drawable/traffic_updates">
 
     </ImageButton>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LeaderBoard"
+        android:layout_below="@+id/traffic_update_button"
+        android:layout_marginLeft="260dp"
+        android:textColor="#31D34C">
+
+    </TextView>
+
     <ImageButton
         android:id="@+id/my_assistant"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="90dp"
         android:scaleType="fitXY"
@@ -99,8 +131,8 @@
 
     <ImageButton
         android:id="@+id/updates_button"
-        android:layout_width="98dp"
-        android:layout_height="91dp"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="180dp"
         android:scaleType="fitXY"
@@ -127,7 +159,41 @@
     android:queryHint="Search..."
     android:layout_margin="16dp"
     android:background="@drawable/search_view_background"
-    app:defaultQueryHint="Default hint text"
+    app:defaultQueryHint="Search for....."
         android:layout_below="@+id/icon_box"/>
+
+    <ImageButton
+        android:id="@+id/learn_section_button"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/map_button"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="41dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/learn_section_icon">
+
+    </ImageButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn"
+        android:textColor="#31D34C"
+        android:layout_below="@+id/learn_section_button"
+        android:layout_marginLeft="85dp"
+        >
+
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="490dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_background1">
+
+    </ImageButton>
 
 </RelativeLayout>
