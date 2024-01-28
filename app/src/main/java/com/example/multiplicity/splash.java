@@ -29,7 +29,7 @@ public class splash extends AppCompatActivity {
 
                 }
                 finally {
-                    Intent isplash=new Intent(splash.this, MainActivity.class);
+                    Intent isplash=new Intent(splash.this, reg_page.class);
                     startActivity(isplash);
 
                 }

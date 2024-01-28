@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultipLiCity"
         tools:targetApi="31">
-        <activity
-            android:name=".activity_cardview"
-            android:exported="false" />
-        <activity
-            android:name=".bt_nav"
-            android:exported="false" />
+
         <activity
             android:name=".login_page"
             android:exported="false" />
